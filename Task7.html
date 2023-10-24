@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #first_table table,#first_table  th,#first_table  td {
+            border: 1px solid black; 
+            border-style: dotted;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        #second_table table,#second_table  th,#second_table  td {
+            border: 2px solid grey; 
+            border-style:ridge; 
+            border-collapse: collapse;
+            text-align: center; 
+            font-size:x-large;
+        }
+        #third_table table, #third_table  th, #third_table  td {
+            border: 3px solid grey; 
+            border-style:solid; 
+            text-align: left; 
+            font-size:x-large;
+        }
+        #fourth_table table, #fourth_table  th, #fourth_table  td {
+            border: 1px solid black; 
+            border-style:solid; 
+            text-align: left; 
+            font-size:x-large;
+        }
+        #fifth_table table{
+            width:40%;
+            height:80%;
+        }
+        #fifth_table table, #fifth_table  th, #fifth_table  td {
+            border: 1px solid black; 
+            border-style:solid;
+            text-align: left; 
+            font-size:x-large;
+            text-align: center;
+            
+        }
+        #sixth_table table, #sixth_table  th, #sixth_table  td {
+            border: 2px solid black; 
+            border-style:ridge;
+            text-align: left; 
+            font-size:large;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        #sixth_table table{
+            border: 5px solid grey;
+        }
+        #sixth_table{
+            padding: 10px;
+            border: 1px solid black; 
+            text-align: center;
+            display: inline-block;
+            justify-content: center;
+            align-items: center;
+        }
+        .sixth_table{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="first_table">
+        <h1>Images in Tables</h1>
+        <hr>
+        <h3>What are your favorite pets?</h3>
+        <table >
+            <tr>
+                <th><b>Pet Image</b></th>
+                <th><b>More facts about (as a link)</b></th>
+            </tr>
+            <tr>
+                <td><img src="horse.jpeg " width="200px" height="200px"></td>
+                <td style="text-align: center;"><a href="https://en.wikipedia.org/wiki/Horse">Horses wikipedia page</a></td>
+            </tr>
+            <tr>
+                <td><img src="cat.jpg" width="200px" height="200px"></td>
+                <td style="text-align: center;"><a href="https://en.wikipedia.org/wiki/Cat">Cats wikipedia page</a></td>
+            </tr>
+            <tr>
+                <td><img src="dog.webp" width="200px" height="200px"></td>
+                <td style="text-align: center;"><a href="https://en.wikipedia.org/wiki/Dog">Dogs wikipedia page</a></td>
+            </tr>
+        </table>
+    </div>
+    <br><br>
+    <div id="second_table">
+        <table>
+            <tr>
+                <td colspan="6">Time Table</td>
+            </tr>
+            <tr>
+                <td rowspan="6">Hours</td>
+                <td>Mon</td>
+                <td>Tues</td>
+                <td>Wed</td>
+                <td>Thurs</td>
+                <td>Fri</td>
+            </tr>
+            <tr>
+                <td>Math</td>
+                <td>Science</td>
+                <td>Math</td>
+                <td>Science</td>
+                <td>Arts</td>
+            </tr>
+            <tr>
+                <td colspan="5">Lunch</td>
+            </tr>
+            <tr>
+                <td>Math</td>
+                <td>Science</td>
+                <td>Math</td>
+                <td colspan="2" rowspan="2">Project</td>
+            </tr>
+            <tr>
+                <td>Math</td>
+                <td>Science</td>
+                <td>Math</td>
+            </tr>
+        </table>
+    </div>
+    <br><br>
+    <div id="third_table">
+        <table>
+            <tr>
+                <td colspan="2"><b>Language and Frameworks</b></td>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td>Django</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Javascript</td>
+                <td>React.js</td>
+            </tr>
+            <tr>
+                <td>Vue.js</td>
+            </tr>
+            <tr>
+                <td>Ruby</td>
+                <td>Ruby on Rails</td>
+            </tr>
+        </table>
+    </div>
+    <br><br>
+    <div id="fourth_table">
+        <b>Table Num. 2</b><br><br>
+        <table>
+            <tr>
+                <td rowspan="2">Row 1-2, Col 1</td>
+                <td> Row 1, Col 2</td>
+                <td> Row 1, Col 3</td>
+                <td> Row 1, Col 4</td>
+            </tr>
+            <tr>
+                <td colspan="2" rowspan="2">Row 2-3, Col 2-3</td>
+                <td>Row 2, Col 4</td>
+            </tr>
+            <tr>
+                <td>Row 3, Col 1</td>
+                <td>Row 3, Col 4</td>
+            </tr>
+            <tr>
+                <td>Row 4, Col 1</td>
+                <td>Row 4, Col 2</td>
+                <td colspan="2">Row 4, Col 3-4</td>
+            </tr>
+        </table>
+    </div>
+    <br><br><br>
+    <div id="fifth_table">
+        <p style="font-size: 25px;"><b>Table using colspan, rowspan</b></p>
+        <table>
+            <tr>
+                <td rowspan="9">A</td>
+                <td rowspan="8">B</td>
+                <td rowspan="7">C</td>
+                <td rowspan="6">D</td>
+                <td rowspan="5">E</td>
+                <td rowspan="4">F</td>
+                <td>AH</td>
+                <td rowspan="4">H</td>
+                <td rowspan="5">I</td>
+                <td rowspan="6">J</td>
+                <td rowspan="7">K</td>
+                <td rowspan="8">L</td>
+                <td rowspan="10">M</td>
+            </tr>
+            <tr>
+                <td>G</td>
+            </tr>
+            <tr>
+                <td>GH</td>
+            </tr>
+            <tr>
+                <td>N</td>
+            </tr>
+            <tr>
+                <td colspan="3">O</td>
+            </tr>
+            <tr>
+                <td colspan="5">P</td>
+            </tr>
+            <tr>
+                <td colspan="7">Q</td>
+            </tr>
+            <tr>
+                <td colspan="2">R</td>
+                <td>S</td>
+                <td>T</td>
+                <td>U</td>
+                <td>V</td>
+                <td>W</td>
+                <td colspan="2">X</td>
+            </tr>
+            <tr>
+                <td colspan="11">Y</td>
+            </tr>
+            <tr>
+                <td colspan="2">Z</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+            </tr>
+        </table>
+    </div><br><br><br>
+    <div class="sixth_table">
+        <div id="sixth_table">
+        <table>
+            <caption style="font-size: 28px;"><b>Time Table</b><br><br></caption>
+            <tr>
+                <td><br><b>Day/Period</b></td>
+                <td><b>I<br>9:30-10:20</b></td>
+                <td><b>II<br>10:20-11:10</b></td>
+                <td><b>III<br>11:10-12:00</b></td>
+                <td><b>I<br>12:00-12:40</b></td>
+                <td><b>IV<br>12:40-1:30</b></td>
+                <td><b>V<br>1:30-2:20</b></td>
+                <td><b>VI<br>2:20-3:10</b></td>
+                <td><b>VII<br>3:10-4:00</b></td>
+            </tr>
+            <tr>
+                <td><b>Monday</b></td>
+                <td>Eng</td>
+                <td>Mat</td>
+                <td>Che</td>
+                <td rowspan="6"><b>L<br>U<br>N<br>C<br>H</b></td>
+                <td colspan="3">LAB</td>
+                <td>Phy</td>
+            </tr>
+            <tr>
+                <td><b>Tuesday</b></td>
+                <td colspan="3">LAB</td>
+                <td>Eng</td>
+                <td>Che</td>
+                <td>Mat</td>
+                <td>SPORTS</td>
+            </tr>
+            <tr>
+                <td><b>Wednesday</b></td>
+                <td>Mat</td>
+                <td>phy</td>
+                <td>Eng</td>
+                <td>Che</td>
+                <td colspan="3">LIBRARY</td>
+            </tr>
+            <tr>
+                <td><b>Thursday</b></td>
+                <td>Phy</td>
+                <td>Eng</td>
+                <td>Che</td>
+                <td colspan="3">LAB</td>
+                <td>Mat</td>
+            </tr>
+            <tr>
+                <td><b>Friday</b></td>
+                <td colspan="3">LAB</td>
+                <td>Mat</td>
+                <td>Che</td>
+                <td>Eng</td>
+                <td>Phy</td>
+            </tr>
+            <tr>
+                <td><b>Saturday</b></td>
+                <td>Eng</td>
+                <td>Che</td>
+                <td>Mat</td>
+                <td colspan="3">SEMINAR</td>
+                <td>SPORTS</td>
+            </tr>
+        </table>
+        </div>
+    </div>
+</body>
+</html>
